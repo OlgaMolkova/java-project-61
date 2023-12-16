@@ -18,14 +18,15 @@ public class Even {
             String userAnswer = scanner.next();
             System.out.println("Your Answer: " + userAnswer);
 
-            if (randomNumberCurrent % 2 == 0 && userAnswer.equals("yes") || randomNumberCurrent % 2 != 0 && userAnswer.equals("no")) {
+            if (randomNumberCurrent % 2 == 0 && userAnswer.equals("yes")
+                    || randomNumberCurrent % 2 != 0 && userAnswer.equals("no")) {
                 System.out.println("Correct!");
             } else if (randomNumberCurrent % 2 == 0 && !userAnswer.equals("yes")) {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'yes'.\n" +
-                        "Let's try again " + userName + " !");
+                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'yes'.\n"
+                        + "Let's try again " + userName + " !");
             } else if (randomNumberCurrent % 2 != 0 && !userAnswer.equals("no")) {
-                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'no'.\n" +
-                        "Let's try again " + userName + " !");
+                System.out.println(userAnswer + " is wrong answer ;(. Correct answer was 'no'.\n"
+                        + "Let's try again " + userName + " !");
             }
 
         }

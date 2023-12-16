@@ -1,6 +1,6 @@
 package hexlet.code;
 
-import java.sql.SQLOutput;
+
 
 public class RandomNumber {
     public static int getRandomNumber() {
