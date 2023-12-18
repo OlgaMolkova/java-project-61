@@ -2,6 +2,7 @@ package hexlet.code.games;
 import hexlet.code.RandomNumber;
 import java.util.Random;
 import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class Calc {
     public static void calc() {
@@ -13,7 +14,7 @@ public class Calc {
 
         System.out.println("What is the result of the expression?");
         var correctCount = 0;
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             int firstRandomNumber = RandomNumber.getRandomNumber();
             int secondRandomNumber = RandomNumber.getRandomNumber();
             int[] operations = new int[]{firstRandomNumber + secondRandomNumber, firstRandomNumber - secondRandomNumber,

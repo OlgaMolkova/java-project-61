@@ -1,5 +1,6 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.RandomNumber;
 
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class Even {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         var correctCount = 0;
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             var randomNumberCurrent = RandomNumber.getRandomNumber();
             System.out.println("Question: " + randomNumberCurrent);
             String userAnswer = scanner.next();

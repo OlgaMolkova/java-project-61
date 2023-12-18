@@ -1,5 +1,6 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import hexlet.code.RandomNumber;
 
 import java.util.Scanner;
@@ -14,7 +15,7 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
         var correctCount = 0;
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             int firstRandomNumber = RandomNumber.getRandomNumber();
             int secondRandomNumber = RandomNumber.getRandomNumber();
             System.out.println(Integer.toString(firstRandomNumber) + " " + Integer.toString(secondRandomNumber));
