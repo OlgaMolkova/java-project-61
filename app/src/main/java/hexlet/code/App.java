@@ -22,6 +22,8 @@ public class App {
             Progression.progression();
         } else if (userChoice == 6) {
             Prime.prime();
+        } else if (userChoice == 0) {
+            System.out.println("Goodbye!");
         }
         scanner.close();
     }
