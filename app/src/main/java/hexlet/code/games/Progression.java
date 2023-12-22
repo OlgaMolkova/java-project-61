@@ -8,7 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
-    public static void progression() {
+    public static void runProgression() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

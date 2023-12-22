@@ -5,8 +5,8 @@ import hexlet.code.RandomNumber;
 
 import java.util.Scanner;
 
-public class GCD {
-    public static void gcd() {
+public class Gcd {
+    public static void runGcd() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

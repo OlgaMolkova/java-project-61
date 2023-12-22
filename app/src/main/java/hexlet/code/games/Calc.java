@@ -1,18 +1,23 @@
 package hexlet.code.games;
+import hexlet.code.Game;
 import hexlet.code.RandomNumber;
 import java.util.Random;
 import java.util.Scanner;
 import hexlet.code.Engine;
 
-public class Calc {
-    public static void calc() {
+import static hexlet.code.Engine.getSomething;
+
+public class Calc implements Game {
+    public static void runCalc() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println("What is the result of the expression?");
+        Calc question1 = new Calc();
+        getSomething(question1);
+
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             int firstRandomNumber = RandomNumber.getRandomNumber();
@@ -39,9 +44,27 @@ public class Calc {
                 break;
             }
         }
+
+        Calc rules = new Calc();
+        getSomething(rules);
+    }
+
+    @Override
+    public void getRules() {
+        Scanner scanner = new Scanner(System.in);
+        String userName = scanner.next();
+        var correctCount = 0;
         if (correctCount == 3) {
             System.out.println("Congratulations, " + userName + "!");
-            scanner.close();
         }
+    }
+
+    @Override
+    public void getData() {
+        Scanner scanner = new Scanner(System.in);
+        int userAnswer = scanner.nextInt();
+        String question = "What is the result of the expression?";
+        String answer = "Your answer: " + userAnswer;
+        String[] str = new String []{question, answer} ;
     }
 }

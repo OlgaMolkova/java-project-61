@@ -6,7 +6,7 @@ import hexlet.code.RandomNumber;
 import java.util.Scanner;
 
 public class Even {
-    public static void even() {
+    public static void runEven() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
