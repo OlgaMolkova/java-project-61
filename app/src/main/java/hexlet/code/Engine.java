@@ -50,8 +50,12 @@ public final class Engine {
                         + correctAnswer + "'" + "\nLet's try again," + userName);
                 break;
             }
-        }
+            if (correctCount == 3) {
+                System.out.println("Congratulations, " + userName + "!");
+                scanner.close();
+            }
 
+        }
     }
 }
 
