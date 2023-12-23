@@ -4,6 +4,8 @@ import hexlet.code.Engine;
 import java.util.Scanner;
 import hexlet.code.games.*;
 
+import static hexlet.code.Engine.*;
+
 public class App {
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
@@ -20,25 +22,25 @@ public class App {
         System.out.println("Your choice " + userChoice);
 
         switch (userChoice) {
-            case 1:
+            case GREAT:
                 Cli.runCli();
                 break;
-            case 2:
+            case EVEN:
                  Even.runEven();
                  break;
-            case 3:
+            case CALC:
                 Calc.runCalc();
                 break;
-            case 4:
+            case GCD:
                 Gcd.runGcd();
                 break;
-            case 5:
+            case PROGRESSION:
                 Progression.runProgression();
                 break;
-            case 6:
+            case PRIME:
                  Prime.runPrime();
                  break;
-            case 0:
+            case EXIT:
                 System.out.println("Goodbye!");
                 break;
         }

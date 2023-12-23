@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public class Even {
     public static void runEven() {
-        Engine.getGreating();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");

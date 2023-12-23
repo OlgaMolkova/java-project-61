@@ -7,17 +7,19 @@ import java.util.Random;
 import java.util.Scanner;
 import hexlet.code.Engine;
 
-import static hexlet.code.Engine.getSomething;
+import static hexlet.code.Engine.*;
 
 public class Calc implements Game {
     public static void runCalc() {
-        Engine.getGreating();
+        Calc great = new Calc();
+        run(great);
+
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
         Calc question1 = new Calc();
-        getSomething(question1);
+        run(question1);
 
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
