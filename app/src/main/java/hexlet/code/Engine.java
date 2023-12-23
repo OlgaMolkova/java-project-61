@@ -38,26 +38,16 @@ public final class Engine {
         System.out.println(game.getRules());
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            int firstRandomNumber = RandomNumber.getRandomNumber();
-            int secondRandomNumber = RandomNumber.getRandomNumber();
-            int[] operations = new int[]{firstRandomNumber + secondRandomNumber, firstRandomNumber - secondRandomNumber,
-                    firstRandomNumber * secondRandomNumber};
-
-            String[] strOperations = new String[]{" + ", " - ", " * "};
-            Random random = new Random();
-            int value = random.nextInt(3);
-
-
-            int correctAnswer = operations[value];
-
+            System.out.println("Question: " + game.getData()[0]);
             int userAnswer = scanner.nextInt();
-
-
+            System.out.println("Your answer: " + userAnswer);
+            int correctAnswer = game.getData()[1];
             if (userAnswer == correctAnswer) {
-                Engine.getCorrect();
+                System.out.println("Correct!");
                 correctCount++;
             } else {
-
+                System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'"
+                        + correctAnswer + "'" + "\nLet's try again," + userName);
                 break;
             }
         }

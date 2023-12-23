@@ -59,5 +59,6 @@ public class Calc implements Game {
     @Override
     public void getData() {
 
+
     }
 }
