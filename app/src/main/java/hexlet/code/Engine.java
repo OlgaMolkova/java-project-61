@@ -41,7 +41,7 @@ public final class Engine {
             System.out.println("Question: " + game.getData()[0]);
             int userAnswer = scanner.nextInt();
             System.out.println("Your answer: " + userAnswer);
-            int correctAnswer = game.getData()[1];
+            int correctAnswer = Integer.parseInt(game.getData()[1]);
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
                 correctCount++;
