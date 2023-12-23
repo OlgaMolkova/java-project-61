@@ -1,15 +1,19 @@
 package hexlet.code;
 
 
+import java.util.Scanner;
+
 public final class Engine {
     public static void getGreating() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
     }
+
     public static void getAnswer(String str) {
         System.out.println(str);
     }
-    public static void getCorrect(){
+
+    public static void getCorrect() {
         System.out.println("Correct!");
     }
 
@@ -24,13 +28,15 @@ public final class Engine {
     public static final int EXIT = 0;
 
     public static void run(Game game) {
-        game.getData();
-        game.getRules();
-        getGreating();
+        System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        Scanner scanner = new Scanner(System.in);
+        String userName = scanner.next();
+        System.out.println("Hello, " + userName + "!");
+
+        System.out.println(game.getRules());
 
     }
-
-
 }
 
 

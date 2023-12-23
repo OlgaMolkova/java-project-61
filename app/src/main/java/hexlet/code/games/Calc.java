@@ -16,10 +16,7 @@ public class Calc implements Game {
 
         Scanner scanner = new Scanner(System.in);
         String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
 
-        Calc question1 = new Calc();
-        run(question1);
 
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
@@ -55,12 +52,12 @@ public class Calc implements Game {
 
     @Override
     public void getRules() {
+        System.out.println("What is the result of the expression?");
     }
 
 
     @Override
     public void getData() {
-        String[] str = new String []{"What is the result of the expression?", "Your answer: "};
-        System.out.println(str[0]);
+
     }
 }
