@@ -39,9 +39,9 @@ public final class Engine {
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             System.out.println("Question: " + game.getData()[0]);
-            int userAnswer = scanner.nextInt();
+            var userAnswer = scanner.next();
             System.out.println("Your answer: " + userAnswer);
-            int correctAnswer = Integer.parseInt(game.getData()[1]);
+            var correctAnswer = game.getData()[1];
             if (userAnswer == correctAnswer) {
                 System.out.println("Correct!");
                 correctCount++;
