@@ -26,10 +26,10 @@ public class App {
                 Cli.runCli();
                 break;
             case EVEN:
-                 Even.runEven();
+                 Engine.run(new Even());
                  break;
             case CALC:
-                Calc.runCalc();
+                Engine.run(new Calc());
                 break;
             case GCD:
                 Gcd.runGcd();

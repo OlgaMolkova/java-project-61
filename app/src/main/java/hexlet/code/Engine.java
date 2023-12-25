@@ -1,24 +1,10 @@
 package hexlet.code;
 
 
-import java.util.Random;
+import hexlet.code.games.Calc;
 import java.util.Scanner;
 
 public final class Engine {
-    public static void getGreating() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-    }
-
-    public static void getAnswer(String str) {
-        System.out.println(str);
-    }
-
-    public static void getCorrect() {
-        System.out.println("Correct!");
-    }
-
-
     public static final int NUMBER_OF_ROUNDS = 3;
     public static final int GREAT = 1;
     public static final int EVEN = 2;
@@ -35,14 +21,14 @@ public final class Engine {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println(game.getRules());
+        game.getRules();
         var correctCount = 0;
         for (var i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             System.out.println("Question: " + game.getData()[0]);
-            var userAnswer = scanner.next();
+            String userAnswer = scanner.next();
             System.out.println("Your answer: " + userAnswer);
-            var correctAnswer = game.getData()[1];
-            if (userAnswer == correctAnswer) {
+            String correctAnswer = game.getData()[1];
+            if (userAnswer.equals(correctAnswer)) {
                 System.out.println("Correct!");
                 correctCount++;
             } else {
